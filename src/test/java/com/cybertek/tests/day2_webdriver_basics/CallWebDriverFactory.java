@@ -1,0 +1,22 @@
+package com.cybertek.tests.day2_webdriver_basics;
+
+import com.cybertek.utilities.WebDriverFactory;
+import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class CallWebDriverFactory {     //It's a Utility class
+
+    private static String browserType;
+
+    public static void main(String[] args) {
+
+        WebDriver driver= WebDriverFactory.getDriver("chrome");
+
+        driver.get("https://www.google.com");
+
+        String title = driver.getTitle();
+
+        System.out.println("title = " + title);
+    }
+}
