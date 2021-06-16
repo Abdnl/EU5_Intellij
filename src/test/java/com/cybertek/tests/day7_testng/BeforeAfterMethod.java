@@ -15,6 +15,7 @@ public class BeforeAfterMethod {
         System.out.println("First Test Case");
     }
 
+    //@Ignore
     @Test
     public void test2(){
         System.out.println("Second Test Case");

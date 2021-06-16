@@ -57,7 +57,8 @@ public class AmazonTest_CouldNotFinishedddd {
 
         driver.quit();
 
-
+        //navigate to amazon.com and search for "java"
+        //span[.='"java"']/../span[1]
 
 
     }
