@@ -12,7 +12,7 @@ public class NavigationDemo {
 
         WebDriver driver = new ChromeDriver();
 
-        driver.get("https://www.google.com");   ////Navigate to another website
+        driver.get("https://www.google.com");   //Navigate to another website
 
         Thread.sleep(3000);
 

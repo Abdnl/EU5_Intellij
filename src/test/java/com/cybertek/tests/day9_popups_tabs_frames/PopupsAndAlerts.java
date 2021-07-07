@@ -29,8 +29,8 @@ public class PopupsAndAlerts {
 
         driver.get("https://www.primefaces.org/showcase/ui/overlay/confirmDialog.xhtml");
 
-        //click the Destroy the World button
-        driver.findElement(By.xpath("//button[.='Destroy the World']")).click();
+        //click the Confirm button
+        driver.findElement(By.xpath("//button/span[text()='Confirm']")).click();
 
         //Click NO button
         driver.findElement(By.xpath("//button[.='No']")).click();
