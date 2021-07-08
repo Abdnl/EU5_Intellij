@@ -23,7 +23,7 @@ public class ExplicitWaitExample {
 
     @AfterMethod
     public void tearDown() throws InterruptedException {
-        //Thread.sleep(2000);
+        Thread.sleep(2000);
         driver.quit();
     }
 
@@ -46,11 +46,12 @@ public class ExplicitWaitExample {
     }
 
     @Test
-    public void test2(){
+    public void test2() throws InterruptedException {
         driver.get("http://practice.cybertekschool.com/dynamic_controls");
 
         //click enable
         driver.findElement(By.xpath("//*[.='Enable']")).click();
+        Thread.sleep(5000);
 
         //finding inputbox
         WebElement inputBox = driver.findElement(By.cssSelector("#input-example>input"));
