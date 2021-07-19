@@ -46,6 +46,8 @@ public class HoverTest {
 
         Assert.assertTrue(text1.isDisplayed(),"verify text 1 is displayed");
 
+       // Assert.assertEquals(text1.isDisplayed(),true);
+
     }
 
     /**

@@ -27,7 +27,7 @@ public class FileUploadTest {
     }
 
     @Test
-    public void test1() {
+    public void test1() {       //Works only Local someone else can't use because it's not dynamic
 
         driver.get("http://practice.cybertekschool.com/upload");
         //locating choose file button
@@ -45,7 +45,7 @@ public class FileUploadTest {
     }
 
     @Test
-    public void test2(){
+    public void test2(){        //Works for everyone because it's a dynamic code.
         driver.get("http://practice.cybertekschool.com/upload");
         //locating choose file button
         WebElement chooseFile = driver.findElement(By.name("file"));

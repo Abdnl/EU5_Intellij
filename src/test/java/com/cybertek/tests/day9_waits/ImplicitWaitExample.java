@@ -19,6 +19,8 @@ public class ImplicitWaitExample {
 
         driver = WebDriverFactory.getDriver("chrome");
         driver.manage().window().maximize();
+        //It will wait to findElement method till opens or up to 30 secs max.
+        //We will set ImplicitWait in Before Method
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 
