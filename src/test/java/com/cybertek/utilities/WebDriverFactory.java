@@ -7,32 +7,30 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class WebDriverFactory {
 
-           public static WebDriver getDriver(String browserType){
+    //Task:
+    //write a static method that takes a string parameter name: browserType
+    //based on the value of parameter
+    //it will setup the browser and
+    //the method will return chromedriver or firefoxdriver object.
+    //name of the method: getDriver
 
-               WebDriver driver = null;
+    public static WebDriver getDriver(String browserType){
 
-                //Chrome,CHROME,ChrOme
-               switch (browserType.toLowerCase()){
+        WebDriver driver = null;
 
-                   case"chrome":
-
-                       WebDriverManager.chromedriver().setup();
-                       driver= new ChromeDriver();
-
-                   break;
-
-                   case "firefox":
-                       WebDriverManager.firefoxdriver().setup();
-                       driver= new FirefoxDriver();
-
-
-                       break;
-
-               }
-
-               return driver;
-
-           }
+        //Chrome,CHROME,ChrOme
+        switch (browserType.toLowerCase()){
+            case "chrome":
+                WebDriverManager.chromedriver().setup();
+                driver= new ChromeDriver();
+                break;
+            case "firefox":
+                WebDriverManager.firefoxdriver().setup();
+                driver=new FirefoxDriver();
+                break;
+        }
+        return driver;
+    }
 
 
 }
