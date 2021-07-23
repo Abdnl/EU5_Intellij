@@ -14,7 +14,8 @@ public class LoginPage {
     }
 
     //driver.findElement(By.id("prependedInput"));
-    @FindAll({
+    @FindAll({          // OR Logic applies; if one of the locators work then it will find it
+                        //But in FindBys ; AND Logic applies;Both locators must work
             @FindBy(id = "prependedInput"),
             @FindBy(name ="_username")
     })
@@ -49,6 +50,16 @@ public class LoginPage {
 
         String username = ConfigurationReader.get("driver_username");
         String password = ConfigurationReader.get("driver_password");
+
+        usernameInput.sendKeys(username);
+        passwordInput.sendKeys(password);
+        loginBtn.click();
+    }
+
+    public void loginAsSalesManager(){
+
+        String username = ConfigurationReader.get("salesmanager_username");
+        String password = ConfigurationReader.get("salesmanager_password");
 
         usernameInput.sendKeys(username);
         passwordInput.sendKeys(password);

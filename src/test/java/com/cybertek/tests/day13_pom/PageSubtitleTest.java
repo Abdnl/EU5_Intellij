@@ -37,7 +37,7 @@ public class PageSubtitleTest extends TestBase {
 
         CalendarEventsPage calendarEventsPage = new CalendarEventsPage();
 
-        BrowserUtils.waitFor(2);
+        BrowserUtils.waitFor(2);        //Test was failing due to slow speed loading
 
         Assert.assertEquals(calendarEventsPage.getPageSubTitle(),"Calendar Events","Verify subtitle Calendar Events");
 
